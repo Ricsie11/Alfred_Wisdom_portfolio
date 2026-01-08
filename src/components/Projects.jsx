@@ -88,7 +88,7 @@ const Projects = () => {
                   </p>
                   
                   <div className="mb-6">
-                    <h4 className="font-medium mb-2">Technologies Used:</h4>
+                    <h4 className="font-medium text-gray-800 dark:text-gray-200 mb-2">Technologies Used:</h4>
                     <div className="flex flex-wrap gap-2">
                       {project.technologies.map((tech) => (
                         <span 

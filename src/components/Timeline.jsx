@@ -13,7 +13,7 @@ const Timeline = () => {
       color: 'bg-blue-500'
     },
     {
-      year: '2022 - 2023',
+      year: '2024 - 2025',
       title: 'Backend Developer',
       company: 'Tech Solutions Inc.',
       icon: <FiBriefcase />,
@@ -21,7 +21,7 @@ const Timeline = () => {
       color: 'bg-green-500'
     },
     {
-      year: '2021 - 2022',
+      year: '2024 - 2025',
       title: 'Frontend Developer',
       company: 'Web Innovations LLC',
       icon: <FiCode />,
@@ -29,11 +29,19 @@ const Timeline = () => {
       color: 'bg-purple-500'
     },
     {
-      year: '2020',
+      year: '2021 - 2023',
       title: 'Computer Science Degree',
-      company: 'University of Technology',
+      company: 'Federal Polythenic Nasarawa',
       icon: <FiAward />,
       description: 'Graduated with honors, specializing in software engineering and database systems. Completed capstone project on scalable web applications.',
+      color: 'bg-yellow-500'
+    },
+    {
+      year: '2025 - present',
+      title: 'Software Engineering',
+      company: 'Miva Open University',
+      icon: <FiAward />,
+      description: 'Software Engineering student at Miva Open University, focusing on database systems and scalable web applications.',
       color: 'bg-yellow-500'
     },
   ];

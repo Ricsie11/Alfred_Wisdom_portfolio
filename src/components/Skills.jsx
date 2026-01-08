@@ -69,7 +69,7 @@ const Skills = () => {
           </div>
           
           <div className="mt-16 bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
-            <h3 className="text-2xl font-bold mb-6 text-center">Tools & Technologies</h3>
+            <h3 className="text-2xl text-gray-800 dark:text-gray-200 font-bold mb-6 text-center">Tools & Technologies</h3>
             <div className="flex flex-wrap justify-center gap-4">
               {['HTML', 'CSS', 'JavaScript', 'React', 'Tailwind CSS', 'Django', 'Django REST Framework', 'PostgreSQL', 'MySQL', 'Git', 'RESTful APIs', 'Responsive Design', 'Python', 'API Integration', 'Web Performance'].map((tool) => (
                 <span 
