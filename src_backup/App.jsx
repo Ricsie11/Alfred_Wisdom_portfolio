@@ -28,7 +28,7 @@ function MainContent() {
   }, []);
 
   return (
-    <div className={`${darkMode ? 'dark bg-gray-900 text-gray-100' : 'bg-gray-50 text-gray-900'} min-h-screen transition-colors duration-300 relative`}>
+    <div className={`${darkMode ? 'dark bg-gray-900 text-gray-100' : 'bg-gray-50 text-gray-900'} min-h-screen transition-colors duration-300 relative overflow-hidden`}>
       <BackgroundEffects darkMode={darkMode} />
       <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

@@ -54,7 +54,7 @@ const Services = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
             My <span className="text-blue-600 dark:text-blue-400">Services</span>
           </h2>
-          <p className="text-gray-600 dark:text-gray-100 text-center mb-12 max-w-2xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-400 text-center mb-12 max-w-2xl mx-auto">
             Comprehensive web development services from frontend to backend
           </p>
           
@@ -67,20 +67,20 @@ const Services = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -5 }}
-                className="glass-panel p-6 rounded-xl shadow-lg h-full"
+                className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 h-full"
               >
                 <div className="w-14 h-14 rounded-xl bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mb-6">
                   <div className="text-blue-600 dark:text-blue-400 text-2xl">
                     {service.icon}
                   </div>
                 </div>
-                <h3 className="text-xl text-gray-800 dark:text-white font-bold mb-3">{service.title}</h3>
-                <p className="text-gray-600 dark:text-gray-100 mb-6">{service.description}</p>
+                <h3 className="text-xl text-gray-800 dark:text-gray-200 font-bold mb-3">{service.title}</h3>
+                <p className="text-gray-600 dark:text-gray-400 mb-6">{service.description}</p>
                 <div className="space-y-2">
                   {service.features.map((feature, idx) => (
                     <div key={idx} className="flex items-center">
                       <div className="w-2 h-2 rounded-full bg-blue-500 mr-3"></div>
-                      <span className="text-gray-700 dark:text-gray-100 text-sm">{feature}</span>
+                      <span className="text-gray-700 dark:text-gray-300 text-sm">{feature}</span>
                     </div>
                   ))}
                 </div>

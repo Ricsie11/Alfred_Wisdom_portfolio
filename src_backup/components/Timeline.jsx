@@ -58,7 +58,7 @@ const Timeline = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
             Career <span className="text-blue-600 dark:text-blue-400">Timeline</span>
           </h2>
-          <p className="text-gray-600 dark:text-gray-100 text-center mb-12 max-w-2xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-400 text-center mb-12 max-w-2xl mx-auto">
             My professional journey and educational background
           </p>
           
@@ -90,11 +90,11 @@ const Timeline = () => {
                 </div>
                 
                 {/* Content */}
-                 <div className={`md:w-2/5 ${index % 2 === 0 ? 'md:text-left md:pl-8' : 'md:text-right md:pr-8'}`}>
-                  <div className="glass-panel p-6 rounded-xl shadow-lg">
-                    <h3 className="text-xl text-gray-800 dark:text-white font-bold mb-1">{item.title}</h3>
+                <div className={`md:w-2/5 ${index % 2 === 0 ? 'md:text-left md:pl-8' : 'md:text-right md:pr-8'}`}>
+                  <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
+                    <h3 className="text-xl text-gray-800 dark:text-gray-200 font-bold mb-1">{item.title}</h3>
                     <p className="text-blue-600 dark:text-blue-400 font-medium mb-3">{item.company}</p>
-                    <p className="text-gray-600 dark:text-gray-100">{item.description}</p>
+                    <p className="text-gray-600 dark:text-gray-400">{item.description}</p>
                   </div>
                 </div>
               </motion.div>

@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 @import "tailwindcss";
 
-@custom-variant dark (&:where(.dark, .dark *));
-
 @theme {
   --animate-blink: blink 1s step-end infinite;
   --animate-spin-slow: spin 8s linear infinite;
@@ -27,21 +25,6 @@
   animation: shooting-star 3s linear infinite;
 }
 
-/* Glassmorphism Utility */
-.glass-panel {
-  background: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-}
-
-.dark .glass-panel {
-  background: rgba(17, 24, 39, 0.75); /* Darker and more opaque */
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
 /* * {
   margin: 0;
   padding: 0;

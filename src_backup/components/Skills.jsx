@@ -31,7 +31,7 @@ const Skills = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
             Technical <span className="text-blue-600 dark:text-blue-400">Skills</span>
           </h2>
-          <p className="text-gray-600 dark:text-gray-100 text-center mb-12 max-w-2xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-400 text-center mb-12 max-w-2xl mx-auto">
             Proficient in modern web technologies and frameworks for building full-stack applications
           </p>
           
@@ -44,7 +44,7 @@ const Skills = () => {
                 transition={{ duration: 0.4, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -5 }}
-                className="glass-panel p-6 rounded-xl flex flex-col items-center"
+                className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 flex flex-col items-center"
               >
                 <div 
                   className="text-4xl mb-4"
@@ -52,8 +52,8 @@ const Skills = () => {
                 >
                   {skill.icon}
                 </div>
-                <h3 className="font-bold text-gray-800 dark:text-white text-lg mb-2">{skill.name}</h3>
-                <div className="w-full bg-gray-200 dark:bg-gray-700/50 rounded-full h-2.5">
+                <h3 className="font-bold text-gray-800 dark:text-gray-200 text-lg mb-2">{skill.name}</h3>
+                <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
                   <motion.div
                     initial={{ width: 0 }}
                     whileInView={{ width: `${skill.level}%` }}
@@ -63,18 +63,18 @@ const Skills = () => {
                     style={{ backgroundColor: skill.color }}
                   />
                 </div>
-                <span className="text-sm text-gray-500 dark:text-gray-100 mt-2">{skill.level}%</span>
+                <span className="text-sm text-gray-500 dark:text-gray-400 mt-2">{skill.level}%</span>
               </motion.div>
             ))}
           </div>
           
-          <div className="mt-16 glass-panel p-8 rounded-xl">
-            <h3 className="text-2xl text-gray-800 dark:text-white font-bold mb-6 text-center">Tools & Technologies</h3>
+          <div className="mt-16 bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
+            <h3 className="text-2xl text-gray-800 dark:text-gray-200 font-bold mb-6 text-center">Tools & Technologies</h3>
             <div className="flex flex-wrap justify-center gap-4">
               {['HTML', 'CSS', 'JavaScript', 'React', 'Tailwind CSS', 'Django', 'Django REST Framework', 'PostgreSQL', 'MySQL', 'Git', 'RESTful APIs', 'Responsive Design', 'Python', 'API Integration', 'Web Performance'].map((tool) => (
                 <span 
                   key={tool}
-                  className="px-4 py-2 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-white rounded-full text-sm font-medium"
+                  className="px-4 py-2 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-sm font-medium"
                 >
                   {tool}
                 </span>

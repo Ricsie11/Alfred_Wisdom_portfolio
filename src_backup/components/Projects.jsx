@@ -56,7 +56,7 @@ const Projects = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
             Featured <span className="text-blue-600 dark:text-blue-400">Projects</span>
           </h2>
-          <p className="text-gray-600 dark:text-gray-100 text-center mb-12 max-w-2xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-400 text-center mb-12 max-w-2xl mx-auto">
             A selection of my recent work showcasing full-stack development capabilities
           </p>
           
@@ -69,7 +69,7 @@ const Projects = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -5 }}
-                className="glass-panel rounded-xl shadow-lg overflow-hidden h-full"
+                className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden h-full"
               >
                 <div className={`h-3 ${project.color}`}></div>
                 <div className="p-6">
@@ -78,22 +78,22 @@ const Projects = () => {
                       <span className="text-2xl">{project.icon}</span>
                     </div>
                     <div>
-                      <h3 className="text-xl text-gray-800 dark:text-white font-bold">{project.title}</h3>
-                      <p className="text-gray-500 dark:text-gray-100 text-sm">Full Stack Application</p>
+                      <h3 className="text-xl text-gray-800 dark:text-gray-200 font-bold">{project.title}</h3>
+                      <p className="text-gray-500 dark:text-gray-400 text-sm">Full Stack Application</p>
                     </div>
                   </div>
                   
-                  <p className="text-gray-700 dark:text-gray-100 mb-6">
+                  <p className="text-gray-700 dark:text-gray-300 mb-6">
                     {project.description}
                   </p>
                   
                   <div className="mb-6">
-                    <h4 className="font-medium text-gray-800 dark:text-white mb-2">Technologies Used:</h4>
+                    <h4 className="font-medium text-gray-800 dark:text-gray-200 mb-2">Technologies Used:</h4>
                     <div className="flex flex-wrap gap-2">
                       {project.technologies.map((tech) => (
                         <span 
                           key={tech}
-                          className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-white rounded-full text-sm"
+                          className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm"
                         >
                           {tech}
                         </span>

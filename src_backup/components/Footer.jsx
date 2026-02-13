@@ -5,7 +5,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="glass-panel text-gray-800 dark:text-gray-300 py-12 mt-20 border-x-0 border-b-0 rounded-none">
+    <footer className="bg-gray-900 dark:bg-black text-gray-300 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-8 md:mb-0">
@@ -14,51 +14,51 @@ const Footer = () => {
                 <span className="text-white font-bold text-xl">AW</span>
               </div>
               <div>
-                <h2 className="text-xl font-bold text-gray-900 dark:text-white">Alfred Wisdom</h2>
-                <p className="text-gray-600 dark:text-gray-100">Full Stack Developer</p>
+                <h2 className="text-xl font-bold text-white">Alfred Wisdom</h2>
+                <p className="text-gray-400">Full Stack Developer</p>
               </div>
             </div>
-            <p className="text-gray-600 dark:text-gray-100 max-w-md">
+            <p className="text-gray-400 max-w-md">
               Building scalable, high-performance web applications with modern technologies and clean code.
             </p>
           </div>
           
           <div className="mb-8 md:mb-0">
-            <h3 className="text-gray-900 dark:text-white font-bold mb-4">Quick Links</h3>
+            <h3 className="text-white font-bold mb-4">Quick Links</h3>
             <div className="flex flex-col space-y-2">
-              <a href="#about" className="text-gray-600 dark:text-gray-100 hover:text-blue-600 dark:hover:text-white transition-colors">About Me</a>
-              <a href="#skills" className="text-gray-600 dark:text-gray-100 hover:text-blue-600 dark:hover:text-white transition-colors">Skills</a>
-              <a href="#projects" className="text-gray-600 dark:text-gray-100 hover:text-blue-600 dark:hover:text-white transition-colors">Projects</a>
-              <a href="#contact" className="text-gray-600 dark:text-gray-100 hover:text-blue-600 dark:hover:text-white transition-colors">Contact</a>
+              <a href="#about" className="text-gray-400 hover:text-white transition-colors">About Me</a>
+              <a href="#skills" className="text-gray-400 hover:text-white transition-colors">Skills</a>
+              <a href="#projects" className="text-gray-400 hover:text-white transition-colors">Projects</a>
+              <a href="#contact" className="text-gray-400 hover:text-white transition-colors">Contact</a>
             </div>
           </div>
           
           <div>
-            <h3 className="text-gray-900 dark:text-white font-bold mb-4">Connect</h3>
+            <h3 className="text-white font-bold mb-4">Connect</h3>
             <div className="flex space-x-4">
               <a 
                 href="https://github.com/Ricsie11" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center text-gray-700 dark:text-gray-200 hover:bg-blue-600 hover:text-white transition-colors"
+                className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-600 transition-colors"
               >
                 <FiGithub />
               </a>
               <a 
                 href="mailto:contact@alfredwisdom.dev"
-                className="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center text-gray-700 dark:text-gray-200 hover:bg-blue-600 hover:text-white transition-colors"
+                className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-600 transition-colors"
               >
                 <FiMail />
               </a>
               <a 
                 href="#" 
-                className="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center text-gray-700 dark:text-gray-200 hover:bg-blue-600 hover:text-white transition-colors"
+                className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-600 transition-colors"
               >
                 <FiLinkedin />
               </a>
               <a 
                 href="#" 
-                className="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center text-gray-700 dark:text-gray-200 hover:bg-blue-600 hover:text-white transition-colors"
+                className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-600 transition-colors"
               >
                 <FiTwitter />
               </a>

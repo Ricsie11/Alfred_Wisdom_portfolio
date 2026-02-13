@@ -39,7 +39,7 @@ const Testimonials = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
             Client <span className="text-blue-600 dark:text-blue-400">Testimonials</span>
           </h2>
-          <p className="text-gray-600 dark:text-gray-100 text-center mb-12 max-w-2xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-400 text-center mb-12 max-w-2xl mx-auto">
             What colleagues and clients say about working with me
           </p>
           
@@ -51,15 +51,15 @@ const Testimonials = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="glass-panel p-6 rounded-xl shadow-lg"
+                className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700"
               >
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mr-4">
                     <span className="font-bold text-blue-600 dark:text-blue-400">{testimonial.avatar}</span>
                   </div>
                   <div>
-                    <h4 className="font-bold text-gray-800 dark:text-white">{testimonial.name}</h4>
-                    <p className="text-gray-500 dark:text-gray-100 text-sm">{testimonial.role}</p>
+                    <h4 className="font-bold text-gray-800 dark:text-gray-200">{testimonial.name}</h4>
+                    <p className="text-gray-500 dark:text-gray-400 text-sm">{testimonial.role}</p>
                   </div>
                 </div>
                 
@@ -72,7 +72,7 @@ const Testimonials = () => {
                   ))}
                 </div>
                 
-                <p className="text-gray-700 dark:text-gray-100 italic">"{testimonial.content}"</p>
+                <p className="text-gray-700 dark:text-gray-300 italic">"{testimonial.content}"</p>
               </motion.div>
             ))}
           </div>
@@ -82,11 +82,11 @@ const Testimonials = () => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.5 }}
             viewport={{ once: true }}
-            className="mt-16 glass-panel p-8 rounded-xl shadow-lg"
+            className="mt-16 bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700"
           >
             <div className="max-w-3xl mx-auto text-center">
-              <h3 className="text-2xl text-gray-800 dark:text-white font-bold mb-4">Ready to Start Your Project?</h3>
-              <p className="text-gray-700 dark:text-gray-100 mb-6">
+              <h3 className="text-2xl text-gray-800 dark:text-gray-200 font-bold mb-4">Ready to Start Your Project?</h3>
+              <p className="text-gray-700 dark:text-gray-300 mb-6">
                 I'm currently available for freelance work and full-time opportunities. Let's discuss how I can help bring your ideas to life with clean, efficient, and scalable solutions.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
@@ -100,7 +100,7 @@ const Testimonials = () => {
                   href="https://github.com/Ricsie11"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-6 py-3 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-white rounded-lg font-medium hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                  className="px-6 py-3 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg font-medium hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
                 >
                   View GitHub Profile
                 </a>
