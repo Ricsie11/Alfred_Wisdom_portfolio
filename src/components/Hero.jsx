@@ -10,7 +10,7 @@ const Hero = () => {
   const [delta, setDelta] = useState(150);
   
   // Words to cycle through - starting with the name as requested
-  const toRotate = ["Alfred Wisdom", "Full Stack Developer", "Problem Solver", "Tech Enthusiast"];
+  const toRotate = ["Full Stack Developer", "Problem Solver", "Tech Enthusiast"];
   const period = 2000; // Time to wait before deleting
 
   useEffect(() => {
@@ -61,7 +61,7 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-xl md:text-2xl font-medium text-gray-600 dark:text-gray-300 mb-4">
-              Hello, I'm
+              Hello, I'm <span className="text-blue-600 dark:text-blue-400 font-bold text-3xl">Alfred Wisdom</span> and I'm a 
             </h2>
             
             <div className="h-20 mb-4 flex items-center justify-center md:justify-start">

@@ -68,7 +68,7 @@ const Footer = () => {
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
           <p>© {currentYear} Alfred Wisdom. All rights reserved.</p>
-          <p className="mt-2 text-sm">Designed and built with React, Tailwind CSS, and Framer Motion</p>
+          <p className="mt-2 text-sm">Designed and built with ❤️ and a beautiful mind </p>
         </div>
       </div>
     </footer>
