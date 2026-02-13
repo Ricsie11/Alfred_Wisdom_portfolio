@@ -113,6 +113,8 @@ const Projects = () => {
                     </a>
                     <a
                       href={project.liveDemo}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                     >
                       <FiExternalLink className="mr-2" />
