@@ -87,7 +87,7 @@ const Hero = () => {
               </Link>
               
               <a 
-                href="/resume" 
+                href="/resume/frontend" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cursor-pointer border border-gray-300 dark:border-gray-600 hover:border-blue-600 dark:hover:border-blue-400 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-8 py-3 rounded-full font-medium transition-all flex items-center gap-2"

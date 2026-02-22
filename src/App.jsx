@@ -10,6 +10,8 @@ import Projects from './components/Projects';
 import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
 import Resume from './components/Resume';
+import BackendResume from './components/BackendResume';
+import FrontendResume from './components/FrontendResume';
 import BackgroundEffects from './components/BackgroundEffects';
 
 function MainContent() {
@@ -50,7 +52,8 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<MainContent />} />
-        <Route path="/resume" element={<Resume />} />
+        <Route path="/resume/frontend" element={<FrontendResume />} />
+        <Route path="/resume/backend" element={<BackendResume />} />
       </Routes>
     </Router>
   );
