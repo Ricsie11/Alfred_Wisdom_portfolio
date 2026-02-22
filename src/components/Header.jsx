@@ -20,30 +20,30 @@ const Header = ({ darkMode, toggleDarkMode }) => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className="sticky top-0 z-50 glass-panel rounded-none border-t-0 border-x-0"
+      className="fixed top-0 left-0 w-full z-50 bg-transparent backdrop-blur-sm"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center">
-              <span className="text-white font-bold text-xl">AW</span>
+          <div className="flex items-center space-x-3">
+            <div className="w-10 h-10 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center shadow-md">
+              <span className="text-white font-bold text-lg">AW</span>
             </div>
-            <div>
-              <h1 className="text-xl font-bold">Alfred Wisdom</h1>
-              <p className="text-sm text-gray-500 dark:text-gray-400">Full Stack Developer</p>
+            <div className="hidden sm:block">
+              <h1 className="text-lg font-semibold">Alfred Wisdom</h1>
+              <p className="text-xs text-gray-500 dark:text-gray-400">Full Stack Developer</p>
             </div>
           </div>
           
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.to}
                 smooth={true}
                 duration={500}
-                className="cursor-pointer text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors"
+                className="cursor-pointer text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors"
               >
                 {item.name}
               </Link>

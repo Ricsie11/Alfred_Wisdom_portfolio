@@ -16,11 +16,11 @@ const Projects = () => {
       color: 'bg-blue-100 dark:bg-blue-900/20'
     },
     {
-      title: 'Expense Tracker',
-      description: 'Comprehensive expense tracking application with analytics, budgeting tools, and multi-user support.',
+      title: 'Trackr',
+      description: 'Trackr — a comprehensive expense tracking app with analytics, budgeting tools, multi-user support, and a live demo.',
       technologies: ['React', 'Django', 'MySQL', 'JWT Authentication'],
       github: 'https://github.com/Ricsie11',
-      liveDemo: '#',
+      liveDemo: 'https://trackr-roan.vercel.app/',
       icon: <FaDatabase className="text-green-500" />,
       color: 'bg-green-100 dark:bg-green-900/20'
     },
@@ -68,58 +68,57 @@ const Projects = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                whileHover={{ y: -5 }}
-                className="glass-panel rounded-xl shadow-lg overflow-hidden h-full"
+                whileHover={{ y: -6, boxShadow: '0 10px 30px rgba(0,0,0,0.12)' }}
+                className="bg-white dark:bg-gray-900 rounded-xl shadow-sm overflow-hidden h-full border border-gray-100 dark:border-gray-800 transition-transform"
               >
-                <div className={`h-3 ${project.color}`}></div>
-                <div className="p-6">
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 rounded-lg bg-gray-100 dark:bg-gray-700 flex items-center justify-center mr-4">
-                      <span className="text-2xl">{project.icon}</span>
-                    </div>
-                    <div>
-                      <h3 className="text-xl text-gray-800 dark:text-white font-bold">{project.title}</h3>
-                      <p className="text-gray-500 dark:text-gray-100 text-sm">Full Stack Application</p>
-                    </div>
+                <div className={`h-2 ${project.color}`}></div>
+                <div className="p-6 flex gap-6">
+                  <div className="w-20 h-20 rounded-full bg-gray-50 dark:bg-gray-800 flex items-center justify-center shrink-0">
+                    <span className="text-3xl">{project.icon}</span>
                   </div>
-                  
-                  <p className="text-gray-700 dark:text-gray-100 mb-6">
-                    {project.description}
-                  </p>
-                  
-                  <div className="mb-6">
-                    <h4 className="font-medium text-gray-800 dark:text-white mb-2">Technologies Used:</h4>
-                    <div className="flex flex-wrap gap-2">
+                  <div className="flex-1">
+                    <div className="flex items-start justify-between">
+                      <div>
+                        <h3 className="text-2xl text-gray-800 dark:text-white font-bold">{project.title}</h3>
+                        <p className="text-sm text-gray-500 dark:text-gray-300 mt-1">Full Stack Application</p>
+                      </div>
+                    </div>
+
+                    <p className="text-gray-700 dark:text-gray-200 mt-4 mb-4">
+                      {project.description}
+                    </p>
+
+                    <div className="flex flex-wrap gap-2 mb-4">
                       {project.technologies.map((tech) => (
                         <span 
                           key={tech}
-                          className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-white rounded-full text-sm"
+                          className="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-full text-sm"
                         >
                           {tech}
                         </span>
                       ))}
                     </div>
-                  </div>
-                  
-                  <div className="flex space-x-4">
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-center px-4 py-2 bg-gray-800 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-700 dark:hover:bg-gray-600 transition-colors"
-                    >
-                      <FiGithub className="mr-2" />
-                      View Code
-                    </a>
-                    <a
-                      href={project.liveDemo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-                    >
-                      <FiExternalLink className="mr-2" />
-                      Live Demo
-                    </a>
+
+                    <div className="flex gap-3">
+                      <a
+                        href={project.liveDemo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:opacity-95 transition"
+                      >
+                        <FiExternalLink className="mr-2" />
+                        Live Demo
+                      </a>
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center px-4 py-2 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-200 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition"
+                      >
+                        <FiGithub className="mr-2" />
+                        View Code
+                      </a>
+                    </div>
                   </div>
                 </div>
               </motion.div>

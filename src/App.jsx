@@ -10,6 +10,9 @@ import Projects from './components/Projects';
 import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
 import Resume from './components/Resume';
+import { Navigate } from 'react-router-dom';
+import FrontendResume from './components/FrontendResume';
+import BackendResume from './components/BackendResume';
 import BackgroundEffects from './components/BackgroundEffects';
 
 function MainContent() {
@@ -50,7 +53,9 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<MainContent />} />
-        <Route path="/resume" element={<Resume />} />
+        <Route path="/resume" element={<Navigate to="/resume/frontend" replace />} />
+        <Route path="/resume/frontend" element={<FrontendResume />} />
+        <Route path="/resume/backend" element={<BackendResume />} />
       </Routes>
     </Router>
   );

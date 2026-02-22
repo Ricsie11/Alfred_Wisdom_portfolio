@@ -1,21 +1,24 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FiMail, FiPhone, FiMapPin, FiGithub, FiExternalLink } from 'react-icons/fi';
-import { FaLinkedin } from 'react-icons/fa';
+import { FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 
 const Resume = () => {
   return (
     <div className="bg-white min-h-screen text-gray-800 font-sans p-8 md:p-16 print:p-0">
-      {/* Print Button - Hidden when printing */}
-      <div className="fixed top-4 right-4 print:hidden z-50">
+      {/* Resume navigation + Print - Hidden when printing */}
+      <div className="fixed top-4 right-4 print:hidden z-50 flex items-center gap-3">
+        <Link to="/resume/frontend" className="bg-gray-100 hover:bg-gray-200 text-gray-800 px-4 py-2 rounded-full font-medium shadow-sm transition-colors text-sm">Frontend</Link>
+        <Link to="/resume/backend" className="bg-gray-100 hover:bg-gray-200 text-gray-800 px-4 py-2 rounded-full font-medium shadow-sm transition-colors text-sm">Backend</Link>
         <button 
           onClick={() => window.print()}
-          className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-medium shadow-lg transition-colors flex items-center gap-2"
+          className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full font-medium shadow-lg transition-colors flex items-center gap-2 text-sm"
         >
-          <FiExternalLink /> Print / Save as PDF
+          <FiExternalLink /> Print / PDF
         </button>
       </div>
 
-      <div className="max-w-4xl mx-auto bg-white print:max-w-none">
+      <div className="max-w-3xl mx-auto bg-white print:max-w-none px-6">
         {/* Header */}
         <header className="border-b-2 border-gray-800 pb-8 mb-8">
           <h1 className="text-4xl md:text-5xl font-bold uppercase tracking-wider mb-4">Alfred Wisdom</h1>
@@ -28,7 +31,11 @@ const Resume = () => {
             </div>
             <div className="flex items-center gap-2">
               <FiPhone className="text-blue-600" />
-              <span>09021704294 / 07025293112</span>
+              <a href="tel:09021704294" className="hover:text-blue-600">09021704294</a>
+            </div>
+            <div className="flex items-center gap-2">
+              <FaWhatsapp className="text-green-600" />
+              <a href="https://wa.me/2347025293112" target="_blank" rel="noopener noreferrer" className="hover:text-green-700">07025293112</a>
             </div>
             <div className="flex items-center gap-2">
               <FiMail className="text-blue-600" />
@@ -74,7 +81,7 @@ const Resume = () => {
 
             {/* Projects */}
             <section>
-              <h3 className="text-xl font-bold uppercase tracking-wide border-b border-gray-300 pb-2 mb-4 text-gray-900">Key Projects</h3>
+              <h3 className="text-xl font-bold uppercase tracking-wide text-blue-600 pb-2 mb-4">Key Projects</h3>
               
               <div className="space-y-4">
                 <div>
@@ -84,9 +91,9 @@ const Resume = () => {
                 </div>
 
                 <div>
-                  <h4 className="font-bold text-gray-800">Expense Tracker</h4>
+                  <h4 className="font-bold text-gray-800">Trackr</h4>
                   <p className="text-sm text-gray-600 italic mb-1">React, Django, MySQL, JWT Authentication</p>
-                  <p className="text-sm text-gray-700">Comprehensive expense tracking application with analytics, budgeting tools, and multi-user support.</p>
+                  <p className="text-sm text-gray-700">Trackr — comprehensive expense tracking with analytics and multi-user support. Live: <a href="https://trackr-roan.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">trackr-roan.vercel.app</a></p>
                 </div>
 
                 <div>

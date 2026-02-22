@@ -45,10 +45,10 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center pt-20 pb-10 overflow-hidden relative">
+    <section id="home" className="min-h-screen flex items-center justify-center pt-28 pb-10 overflow-hidden relative">
       {/* Background gradients */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl -z-10 animate-pulse" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl -z-10 animate-pulse delay-1000" />
+      <div className="absolute -top-8 left-8 w-80 h-80 bg-gradient-to-r from-blue-500/20 to-transparent rounded-full blur-3xl -z-10 animate-[pulse_6s_infinite]" />
+      <div className="absolute bottom-10 right-6 w-96 h-96 bg-gradient-to-l from-purple-500/20 to-transparent rounded-full blur-3xl -z-10 animate-[pulse_6s_infinite]" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
@@ -60,14 +60,15 @@ const Hero = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-xl md:text-2xl font-medium text-gray-600 dark:text-gray-300 mb-4">
-              Hello, I'm <span className="text-blue-600 dark:text-blue-400 font-bold text-3xl">Alfred Wisdom</span> and I'm a 
+            <h2 className="text-lg md:text-xl font-medium text-gray-600 dark:text-gray-300 mb-4">
+              Hello — I'm
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 font-extrabold text-3xl md:text-4xl ml-2"> Alfred Wisdom</span>
             </h2>
             
             <div className="h-20 mb-4 flex items-center justify-center md:justify-start">
-              <h1 className="text-4xl md:text-6xl font-bold bg-linear-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
+              <h1 className="text-4xl md:text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
                 {text}
-                <span className="border-r-4 border-blue-600 dark:border-blue-400 ml-1 animate-blink"></span>
+                <span className="border-r-2 border-blue-600 dark:border-blue-400 ml-1 animate-blink"></span>
               </h1>
             </div>
 
@@ -87,10 +88,10 @@ const Hero = () => {
               </Link>
               
               <a 
-                href="/resume" 
+                href="/resume/frontend" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="cursor-pointer border border-gray-300 dark:border-gray-600 hover:border-blue-600 dark:hover:border-blue-400 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-8 py-3 rounded-full font-medium transition-all flex items-center gap-2"
+                className="cursor-pointer border border-gray-200 dark:border-gray-700 hover:border-blue-600 dark:hover:border-blue-400 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-6 py-2 rounded-lg font-medium transition-all flex items-center gap-2"
               >
                 View CV
                 <FiExternalLink />
