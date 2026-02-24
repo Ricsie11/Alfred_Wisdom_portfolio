@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
 import { FiArrowRight, FiDownload, FiExternalLink } from 'react-icons/fi';
+import photo from '../assets/Myphoto.jpeg'; 
 
 const Hero = () => {
   const [text, setText] = useState('');
@@ -112,7 +113,7 @@ const Hero = () => {
               {/* Profile Image Container */}
               <div className="absolute inset-4 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-2xl bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
                  {/* Placeholder for user image if they have one, otherwise a coding illustration */}
-                 <span className="text-9xl">👨‍💻</span>
+                 <span className="text-9xl"><img src={photo} alt="Alfred's photo" /></span>
               </div>
             </div>
           </motion.div>

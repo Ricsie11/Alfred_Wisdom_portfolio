@@ -1,49 +1,75 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { FiExternalLink, FiGithub } from 'react-icons/fi';
-import { FaReact, FaPython, FaDatabase } from 'react-icons/fa';
-import { SiDjango, SiTailwindcss } from 'react-icons/si';
+import React from "react";
+import { motion } from "framer-motion";
+import { FiExternalLink, FiGithub } from "react-icons/fi";
+import { FaReact, FaPython, FaDatabase } from "react-icons/fa";
+import { SiDjango, SiTailwindcss } from "react-icons/si";
 
 const Projects = () => {
   const projects = [
     {
-      title: 'Travel App',
-      description: 'A frontend travel planning application with interactive itinerary management and destination exploration.',
-      technologies: ['React', 'Django REST Framework', 'PostgreSQL', 'Tailwind CSS'],
-      github: 'https://github.com/Ricsie11',
-      liveDemo: 'https://atlas-travels.vercel.app/',
-      icon: <FaReact className="text-blue-500" />,
-      color: 'bg-blue-100 dark:bg-blue-900/20'
+      title: "Travel App",
+      type: "Frontend Application",
+      description:
+        "A frontend travel planning application with interactive itinerary management and destination exploration.",
+      technologies: ["React", "Tailwind CSS", "Framer Motion"],
+      github: "https://github.com/Ricsie11",
+      liveDemo: "https://atlas-travels.vercel.app/",
+      icons: [
+        <FaReact key="react" className="text-blue-500" />,
+        <SiTailwindcss key="tailwind" className="text-cyan-400" />,
+      ],
+      color: "bg-blue-100 dark:bg-blue-900/20",
     },
     {
-      title: 'Expense Tracker',
-      description: 'Comprehensive expense tracking application with analytics, budgeting tools, and multi-user support.',
-      technologies: ['React', 'Django', 'MySQL', 'JWT Authentication'],
-      github: 'https://github.com/Ricsie11',
-      liveDemo: '#',
-      icon: <FaDatabase className="text-green-500" />,
-      color: 'bg-green-100 dark:bg-green-900/20'
+      title: "Trackr",
+      type: "Full Stack Application",
+      description:
+        "Comprehensive expense tracking application with analytics, budgeting tools, and multi-user support.",
+      technologies: ["React", "Django", "PostgreSQL", "JWT Authentication"],
+      github: "https://github.com/Ricsie11",
+      liveDemo: "trackr-roan.vercel.app",
+      icons: [
+        <FaReact key="react" className="text-blue-500" />,
+        <SiDjango key="django" className="text-green-500" />,
+      ],
+      color: "bg-green-100 dark:bg-green-900/20",
     },
     {
-      title: 'E-commerce Platform',
-      description: 'Feature-rich e-commerce platform with product management, shopping cart, payment integration, and admin dashboard.',
-      technologies: ['React', 'Django', 'PostgreSQL', 'Stripe API', 'Redis'],
-      github: 'https://github.com/Ricsie11',
-      liveDemo: '#',
-      icon: <SiDjango className="text-green-700" />,
-      color: 'bg-purple-100 dark:bg-purple-900/20'
+      title: "E-commerce Platform",
+      type: "Full Stack Application",
+      description:
+        "Feature-rich e-commerce platform with product management, shopping cart, payment integration, and admin dashboard.",
+      technologies: ["React", "Django", "PostgreSQL", "Stripe API", "Redis"],
+      github: "https://github.com/Ricsie11",
+      liveDemo: "#",
+      icons: [
+        <FaReact key="react" className="text-blue-500" />,
+        <SiDjango key="django" className="text-green-700" />,
+      ],
+      color: "bg-purple-100 dark:bg-purple-900/20",
     },
     {
-      title: 'Task Management System',
-      description: 'Collaborative task management tool with real-time updates, team collaboration, and progress tracking.',
-      technologies: ['React', 'Django Channels', 'WebSocket', 'PostgreSQL', 'Tailwind CSS'],
-      github: 'https://github.com/Ricsie11',
-      liveDemo: '#',
-      icon: <FaPython className="text-yellow-500" />,
-      color: 'bg-yellow-100 dark:bg-yellow-900/20'
+      title: "Task Management System",
+      type: "Real-time Application",
+      description:
+        "Collaborative task management tool with real-time updates, team collaboration, and progress tracking.",
+      technologies: [
+        "React",
+        "Django Channels",
+        "WebSocket",
+        "PostgreSQL",
+        "Tailwind CSS",
+      ],
+      github: "https://github.com/Ricsie11",
+      liveDemo: "#",
+      icons: [
+        <FaReact key="react" className="text-blue-500" />,
+        <FaPython key="python" className="text-yellow-500" />,
+      ],
+      color: "bg-yellow-100 dark:bg-yellow-900/20",
     },
   ];
-  
+
   return (
     <section id="projects" className="py-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -54,12 +80,13 @@ const Projects = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-            Featured <span className="text-blue-600 dark:text-blue-400">Projects</span>
+            Featured{" "}
+            <span className="text-blue-600 dark:text-blue-400">Projects</span>
           </h2>
           <p className="text-gray-600 dark:text-gray-100 text-center mb-12 max-w-2xl mx-auto">
-            A selection of my recent work showcasing full-stack development capabilities
+            A selection of my recent work showcasing my development capabilities
           </p>
-          
+
           <div className="grid md:grid-cols-2 gap-8">
             {projects.map((project, index) => (
               <motion.div
@@ -69,29 +96,64 @@ const Projects = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -5 }}
-                className="glass-panel rounded-xl shadow-lg overflow-hidden h-full"
+                className="glass-panel rounded-xl shadow-lg overflow-hidden h-full flex flex-col"
               >
                 <div className={`h-3 ${project.color}`}></div>
-                <div className="p-6">
+                
+                {/* Project Preview */}
+                <div className="relative w-full h-48 sm:h-56 bg-gray-200 dark:bg-gray-800 overflow-hidden border-b border-gray-100 dark:border-gray-700/50">
+                  {project.liveDemo !== '#' ? (
+                    <div className="w-full h-full relative flex justify-center items-center bg-gray-50 dark:bg-gray-900 overflow-hidden group">
+                      <div className="absolute inset-0 bg-transparent z-10 pointer-events-auto cursor-pointer" onClick={() => window.open(project.liveDemo.startsWith('http') ? project.liveDemo : `https://${project.liveDemo}`, '_blank')}></div>
+                      <iframe
+                        src={project.liveDemo.startsWith('http') ? project.liveDemo : `https://${project.liveDemo}`}
+                        title={`${project.title} Preview`}
+                        className="absolute top-0 left-0 w-[200%] h-[200%] origin-top-left scale-50 pointer-events-none"
+                        tabIndex={-1}
+                      />
+                    </div>
+                  ) : (
+                    <div className="w-full h-full flex flex-col items-center justify-center bg-gray-100 dark:bg-gray-800 text-gray-400 dark:text-gray-500">
+                      <div className="w-16 h-16 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center mb-3">
+                         <span className="text-3xl opacity-50">{project.icons[0]}</span>
+                      </div>
+                      <span className="text-lg font-medium opacity-80">Preview Coming Soon</span>
+                    </div>
+                  )}
+                </div>
+
+                <div className="p-6 flex flex-col flex-grow">
                   <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 rounded-lg bg-gray-100 dark:bg-gray-700 flex items-center justify-center mr-4">
-                      <span className="text-2xl">{project.icon}</span>
+                    <div className="w-auto px-3 py-2 min-w-12 h-12 rounded-lg bg-gray-100 dark:bg-gray-700 flex items-center justify-center mr-4">
+                      <div className="flex items-center gap-2">
+                        {project.icons.map((Icon, idx) => (
+                          <span key={idx} className="text-2xl">
+                            {Icon}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                     <div>
-                      <h3 className="text-xl text-gray-800 dark:text-white font-bold">{project.title}</h3>
-                      <p className="text-gray-500 dark:text-gray-100 text-sm">Full Stack Application</p>
+                      <h3 className="text-xl text-gray-800 dark:text-white font-bold">
+                        {project.title}
+                      </h3>
+                      <p className="text-gray-500 dark:text-gray-100 text-sm">
+                        {project.type}
+                      </p>
                     </div>
                   </div>
-                  
+
                   <p className="text-gray-700 dark:text-gray-100 mb-6">
                     {project.description}
                   </p>
-                  
+
                   <div className="mb-6">
-                    <h4 className="font-medium text-gray-800 dark:text-white mb-2">Technologies Used:</h4>
+                    <h4 className="font-medium text-gray-800 dark:text-white mb-2">
+                      Technologies Used:
+                    </h4>
                     <div className="flex flex-wrap gap-2">
                       {project.technologies.map((tech) => (
-                        <span 
+                        <span
                           key={tech}
                           className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-white rounded-full text-sm"
                         >
@@ -100,32 +162,42 @@ const Projects = () => {
                       ))}
                     </div>
                   </div>
-                  
-                  <div className="flex space-x-4">
+
+                  <div className="flex space-x-4 mt-auto">
                     <a
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-center px-4 py-2 bg-gray-800 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-700 dark:hover:bg-gray-600 transition-colors"
+                      className="flex items-center justify-center flex-1 px-4 py-2 bg-gray-800 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-700 dark:hover:bg-gray-600 transition-colors"
                     >
                       <FiGithub className="mr-2" />
-                      View Code
+                      Code
                     </a>
-                    <a
-                      href={project.liveDemo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-                    >
-                      <FiExternalLink className="mr-2" />
-                      Live Demo
-                    </a>
+                    {project.liveDemo !== '#' ? (
+                      <a
+                        href={project.liveDemo.startsWith('http') ? project.liveDemo : `https://${project.liveDemo}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center flex-1 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                      >
+                        <FiExternalLink className="mr-2" />
+                        Live Demo
+                      </a>
+                    ) : (
+                      <button
+                        disabled
+                        className="flex items-center justify-center flex-1 px-4 py-2 bg-gray-400 dark:bg-gray-600 text-white rounded-lg cursor-not-allowed opacity-70"
+                      >
+                        <FiExternalLink className="mr-2" />
+                        Coming Soon
+                      </button>
+                    )}
                   </div>
                 </div>
               </motion.div>
             ))}
           </div>
-          
+
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
