@@ -1,80 +1,123 @@
-import { motion } from 'framer-motion';
-import { 
-  FaHtml5, FaCss3Alt, FaJs, FaReact, FaPython, 
-  FaDatabase, FaGitAlt, FaNodeJs 
-} from 'react-icons/fa';
-import { SiDjango, SiPostgresql, SiMysql, SiTailwindcss } from 'react-icons/si';
+import { motion } from "framer-motion";
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaReact,
+  FaPython,
+  FaGitAlt,
+  FaTerminal,
+  FaServer,
+} from "react-icons/fa";
+import {
+  SiDjango,
+  SiPostgresql,
+  SiMysql,
+  SiTailwindcss,
+  SiFramer,
+} from "react-icons/si";
 
 const Skills = () => {
-  const skills = [
-    { name: 'HTML5', icon: <FaHtml5 />, level: 95, color: '#E34F26' },
-    { name: 'CSS3', icon: <FaCss3Alt />, level: 90, color: '#1572B6' },
-    { name: 'JavaScript', icon: <FaJs />, level: 88, color: '#F7DF1E' },
-    { name: 'React', icon: <FaReact />, level: 85, color: '#61DAFB' },
-    { name: 'Tailwind CSS', icon: <SiTailwindcss />, level: 90, color: '#06B6D4' },
-    { name: 'Django', icon: <SiDjango />, level: 87, color: '#092E20' },
-    { name: 'Django REST', icon: <FaPython />, level: 85, color: '#306998' },
-    { name: 'PostgreSQL', icon: <SiPostgresql />, level: 82, color: '#336791' },
-    { name: 'MySQL', icon: <SiMysql />, level: 80, color: '#4479A1' },
-    { name: 'Git', icon: <FaGitAlt />, level: 88, color: '#F05032' },
+  const categories = [
+    {
+      title: "Frontend",
+      skills: [
+        { name: "React", icon: <FaReact />, color: "#61DAFB" },
+        { name: "Tailwind", icon: <SiTailwindcss />, color: "#06B6D4" },
+        { name: "Framer", icon: <SiFramer />, color: "#0055FF" },
+        { name: "JavaScript", icon: <FaJs />, color: "#F7DF1E" },
+      ],
+    },
+    {
+      title: "Backend",
+      skills: [
+        { name: "Django", icon: <SiDjango />, color: "#092E20" },
+        { name: "Python", icon: <FaPython />, color: "#3776AB" },
+        { name: "PostgreSQL", icon: <SiPostgresql />, color: "#4169E1" },
+      ],
+    },
+    {
+      title: "Tools & Infrastructure",
+      skills: [
+        { name: "Git", icon: <FaGitAlt />, color: "#F05032" },
+        { name: "Terminal", icon: <FaTerminal />, color: "#4D4D4D" },
+        { name: "REST APIs", icon: <FaServer />, color: "#555555" },
+      ],
+    },
   ];
-  
+
   return (
-    <section id="skills" className="py-20 bg-gray-100 dark:bg-gray-800/50">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="skills" className="py-24 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-            Technical <span className="text-blue-600 dark:text-blue-400">Skills</span>
-          </h2>
-          <p className="text-gray-600 dark:text-gray-100 text-center mb-12 max-w-2xl mx-auto">
-            Proficient in modern web technologies and frameworks for building full-stack applications
-          </p>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            {skills.map((skill, index) => (
-              <motion.div
-                key={skill.name}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -5 }}
-                className="glass-panel p-6 rounded-xl flex flex-col items-center"
-              >
-                <div 
-                  className="text-4xl mb-4"
-                  style={{ color: skill.color }}
-                >
-                  {skill.icon}
+          <div className="text-center mb-20">
+            <h2 className="text-sm font-mono uppercase tracking-[0.4em] text-blue-600 dark:text-blue-400 mb-4">
+              Stack
+            </h2>
+            <h3 className="text-4xl md:text-5xl font-bold tracking-tight">
+              Technical <span className="italic text-slate-400">Weaponry</span>.
+            </h3>
+          </div>
+
+          <div className="space-y-16">
+            {categories.map((cat, catIdx) => (
+              <div key={catIdx}>
+                <h4 className="text-xs font-mono uppercase tracking-widest text-slate-500 mb-8 flex items-center gap-4">
+                  <span>{cat.title}</span>
+                  <div className="h-px flex-1 bg-slate-100 dark:bg-slate-800" />
+                </h4>
+                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                  {cat.skills.map((skill, idx) => (
+                    <motion.div
+                      key={skill.name}
+                      whileHover={{ y: -4, scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                      className="glass-panel p-5 rounded-2xl flex flex-col items-center justify-center transition-all group"
+                    >
+                      <div
+                        className="text-3xl mb-4 transition-transform group-hover:scale-110"
+                        style={{ color: skill.color }}
+                      >
+                        {skill.icon}
+                      </div>
+                      <h5 className="font-mono text-xs font-semibold tracking-tight text-slate-800 dark:text-slate-200">
+                        {skill.name}
+                      </h5>
+                    </motion.div>
+                  ))}
                 </div>
-                <h3 className="font-bold text-gray-800 dark:text-white text-lg mb-2">{skill.name}</h3>
-                <div className="w-full bg-gray-200 dark:bg-gray-700/50 rounded-full h-2.5">
-                  <motion.div
-                    initial={{ width: 0 }}
-                    whileInView={{ width: `${skill.level}%` }}
-                    transition={{ duration: 1, delay: 0.5 + index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="h-2.5 rounded-full"
-                    style={{ backgroundColor: skill.color }}
-                  />
-                </div>
-                <span className="text-sm text-gray-500 dark:text-gray-100 mt-2">{skill.level}%</span>
-              </motion.div>
+              </div>
             ))}
           </div>
-          
-          <div className="mt-16 glass-panel p-8 rounded-xl">
-            <h3 className="text-2xl text-gray-800 dark:text-white font-bold mb-6 text-center">Tools & Technologies</h3>
-            <div className="flex flex-wrap justify-center gap-4">
-              {['HTML', 'CSS', 'JavaScript', 'React', 'Tailwind CSS', 'Django', 'Django REST Framework', 'PostgreSQL', 'MySQL', 'Git', 'RESTful APIs', 'Responsive Design', 'Python', 'API Integration', 'Web Performance'].map((tool) => (
-                <span 
+
+          {/* Tag Cloud for more skills */}
+          <div className="mt-20 pt-16 border-t border-slate-100 dark:border-slate-800">
+            <p className="text-center text-sm font-mono text-slate-500 mb-8 uppercase tracking-widest">
+              Other Technologies & Paradigms
+            </p>
+            <div className="flex flex-wrap justify-center gap-3">
+              {[
+                "HTML5",
+                "CSS3",
+                "PostgreSQL",
+                "MySQL",
+                "Redis",
+                "Docker",
+                "AWS",
+                "Vercel",
+                "Architecture Design",
+                "Performance Tuning",
+                "Security Audit",
+                "UX Research",
+              ].map((tool) => (
+                <span
                   key={tool}
-                  className="px-4 py-2 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-white rounded-full text-sm font-medium"
+                  className="px-5 py-2.5 bg-slate-50 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800 text-slate-600 dark:text-slate-400 rounded-xl text-xs font-mono transition-colors hover:border-blue-500/30 hover:text-blue-600 cursor-default"
                 >
                   {tool}
                 </span>

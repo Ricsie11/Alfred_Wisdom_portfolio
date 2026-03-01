@@ -1,197 +1,215 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FiExternalLink, FiGithub } from "react-icons/fi";
-import { FaReact, FaPython, FaDatabase } from "react-icons/fa";
-import { SiDjango, SiTailwindcss } from "react-icons/si";
+import { FiExternalLink, FiGithub, FiArrowRight } from "react-icons/fi";
+import { FaReact, FaPython } from "react-icons/fa";
+import {
+  SiDjango,
+  SiTailwindcss,
+  SiPostgresql,
+  SiFramer,
+} from "react-icons/si";
 
 const Projects = () => {
   const projects = [
     {
-      title: "Travel App",
-      type: "Frontend Application",
+      title: "Atlas Travels",
+      type: "Frontend Engine",
       description:
-        "A frontend travel planning application with interactive itinerary management and destination exploration.",
-      technologies: ["React", "Tailwind CSS", "Framer Motion"],
+        "A high-performance travel architecture featuring interactive itinerary engines and dynamic destination exploration.",
+      technologies: ["React", "Tailwind", "Framer Motion"],
       github: "https://github.com/Ricsie11",
       liveDemo: "https://atlas-travels.vercel.app/",
+      featured: true,
       icons: [
         <FaReact key="react" className="text-blue-500" />,
         <SiTailwindcss key="tailwind" className="text-cyan-400" />,
+        <SiFramer key="framer" className="text-white" />,
       ],
-      color: "bg-blue-100 dark:bg-blue-900/20",
+      color: "blue",
     },
     {
       title: "Trackr",
-      type: "Full Stack Application",
+      type: "Full Stack Ecosystem",
       description:
-        "Comprehensive expense tracking application with analytics, budgeting tools, and multi-user support.",
-      technologies: ["React", "Django", "PostgreSQL", "JWT Authentication"],
+        "Enterprise-grade financial analytics suite with real-time budgeting algorithms and multi-layered security.",
+      technologies: ["Django", "React", "PostgreSQL"],
       github: "https://github.com/Ricsie11",
-      liveDemo: "trackr-roan.vercel.app",
+      liveDemo: "https://trackr-roan.vercel.app",
       icons: [
-        <FaReact key="react" className="text-blue-500" />,
-        <SiDjango key="django" className="text-green-500" />,
+        <SiDjango key="django" className="text-green-600" />,
+        <FaReact key="react" className="text-blue-400" />,
+        <SiPostgresql key="postgres" className="text-blue-600" />,
       ],
-      color: "bg-green-100 dark:bg-green-900/20",
+      color: "emerald",
     },
     {
-      title: "E-commerce Platform",
-      type: "Full Stack Application",
+      title: "Epic OG Collection",
+      type: "Commerce Architecture",
       description:
-        "Feature-rich e-commerce platform with product management, shopping cart, payment integration, and admin dashboard.",
-      technologies: ["React", "Django", "PostgreSQL", "Stripe API", "Redis"],
+        "E-commerce infrastructure designed for high-concurrency, featuring modular product engines and unified checkout.",
+      technologies: ["React", "Django", "Redis", "Stripe"],
       github: "https://github.com/Ricsie11",
       liveDemo: "#",
       icons: [
         <FaReact key="react" className="text-blue-500" />,
         <SiDjango key="django" className="text-green-700" />,
       ],
-      color: "bg-purple-100 dark:bg-purple-900/20",
+      color: "purple",
     },
     {
-      title: "Task Management System",
-      type: "Real-time Application",
+      title: "SyncOS",
+      type: "Real-time Protocol",
       description:
-        "Collaborative task management tool with real-time updates, team collaboration, and progress tracking.",
-      technologies: [
-        "React",
-        "Django Channels",
-        "WebSocket",
-        "PostgreSQL",
-        "Tailwind CSS",
-      ],
+        "Collaborative orchestration tool powered by WebSockets for instantaneous state synchronization across distributed teams.",
+      technologies: ["Django Channels", "WebSockets", "React"],
       github: "https://github.com/Ricsie11",
       liveDemo: "#",
       icons: [
-        <FaReact key="react" className="text-blue-500" />,
         <FaPython key="python" className="text-yellow-500" />,
+        <FaReact key="react" className="text-blue-500" />,
       ],
-      color: "bg-yellow-100 dark:bg-yellow-900/20",
+      color: "amber",
     },
   ];
 
   return (
-    <section id="projects" className="py-20">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="py-24 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-            Featured{" "}
-            <span className="text-blue-600 dark:text-blue-400">Projects</span>
-          </h2>
-          <p className="text-gray-600 dark:text-gray-100 text-center mb-12 max-w-2xl mx-auto">
-            A selection of my recent work showcasing my development capabilities
-          </p>
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+            <div>
+              <h2 className="text-sm font-mono uppercase tracking-[0.4em] text-blue-600 dark:text-blue-400 mb-4">
+                Portfolio
+              </h2>
+              <h3 className="text-4xl md:text-5xl font-bold tracking-tight">
+                Selected <span className="italic text-slate-400">Works</span>.
+              </h3>
+            </div>
+            <p className="text-slate-500 dark:text-slate-400 max-w-md font-light leading-relaxed">
+              A curated collection of digital systems designed to balance
+              architectical integrity with visual excellence.
+            </p>
+          </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
             {projects.map((project, index) => (
               <motion.div
                 key={project.title}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                whileHover={{ y: -5 }}
-                className="glass-panel rounded-xl shadow-lg overflow-hidden h-full flex flex-col"
+                className="group relative flex flex-col h-full"
               >
-                <div className={`h-3 ${project.color}`}></div>
-                
-                {/* Project Preview */}
-                <div className="relative w-full h-48 sm:h-56 bg-gray-200 dark:bg-gray-800 overflow-hidden border-b border-gray-100 dark:border-gray-700/50">
-                  {project.liveDemo !== '#' ? (
-                    <div className="w-full h-full relative flex justify-center items-center bg-gray-50 dark:bg-gray-900 overflow-hidden group">
-                      <div className="absolute inset-0 bg-transparent z-10 pointer-events-auto cursor-pointer" onClick={() => window.open(project.liveDemo.startsWith('http') ? project.liveDemo : `https://${project.liveDemo}`, '_blank')}></div>
-                      <iframe
-                        src={project.liveDemo.startsWith('http') ? project.liveDemo : `https://${project.liveDemo}`}
-                        title={`${project.title} Preview`}
-                        className="absolute top-0 left-0 w-[200%] h-[200%] origin-top-left scale-50 pointer-events-none"
-                        tabIndex={-1}
-                      />
-                    </div>
-                  ) : (
-                    <div className="w-full h-full flex flex-col items-center justify-center bg-gray-100 dark:bg-gray-800 text-gray-400 dark:text-gray-500">
-                      <div className="w-16 h-16 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center mb-3">
-                         <span className="text-3xl opacity-50">{project.icons[0]}</span>
-                      </div>
-                      <span className="text-lg font-medium opacity-80">Preview Coming Soon</span>
-                    </div>
-                  )}
-                </div>
+                {/* Project Badge */}
+                {project.featured && (
+                  <div className="absolute -top-3 left-6 z-20 px-4 py-1.5 bg-blue-600 text-white text-[10px] font-bold uppercase tracking-widest rounded-full shadow-glow">
+                    Featured Project
+                  </div>
+                )}
 
-                <div className="p-6 flex flex-col flex-grow">
-                  <div className="flex items-center mb-4">
-                    <div className="w-auto px-3 py-2 min-w-12 h-12 rounded-lg bg-gray-100 dark:bg-gray-700 flex items-center justify-center mr-4">
-                      <div className="flex items-center gap-2">
-                        {project.icons.map((Icon, idx) => (
-                          <span key={idx} className="text-2xl">
-                            {Icon}
-                          </span>
-                        ))}
+                {/* Card Container */}
+                <div className="glass-panel rounded-4xl overflow-hidden grow flex flex-col border-slate-200/50 dark:border-slate-800/50 transition-all duration-500 group-hover:border-blue-500/20 group-hover:shadow-2xl">
+                  {/* Decorative Background for Image */}
+                  <div className="relative aspect-video overflow-hidden bg-slate-100 dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800">
+                    <div className="absolute inset-0 bg-linear-to-br from-blue-500/5 to-purple-500/5" />
+
+                    {/* Preview Mock */}
+                    <div className="absolute inset-8 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-xl overflow-hidden transform group-hover:scale-[1.02] transition-transform duration-700">
+                      <div className="h-6 bg-slate-50 dark:bg-slate-900 border-b border-slate-100 dark:border-slate-700 flex items-center px-3 gap-1.5 z-10 relative">
+                        <div className="w-2 h-2 rounded-full bg-slate-200 dark:bg-slate-700" />
+                        <div className="w-2 h-2 rounded-full bg-slate-200 dark:bg-slate-700" />
+                        <div className="w-2 h-2 rounded-full bg-slate-200 dark:bg-slate-700" />
+                      </div>
+
+                      {/* Live Iframe Preview or Fallback */}
+                      <div className="absolute inset-0 top-6 overflow-hidden">
+                        {project.liveDemo !== "#" ? (
+                          <div className="w-full h-full relative group/iframe">
+                            <iframe
+                              src={project.liveDemo}
+                              title={project.title}
+                              className="w-[400%] h-[400%] origin-top-left scale-[0.25] pointer-events-none opacity-40 group-hover:opacity-100 transition-opacity duration-700"
+                              loading="lazy"
+                            />
+                            {/* Overlay to ensure hover is captured by parent and looks premium */}
+                            <div className="absolute inset-0 bg-linear-to-b from-transparent to-white/10 dark:to-slate-900/10 pointer-events-none" />
+                          </div>
+                        ) : (
+                          <div className="p-6 h-full flex flex-col items-center justify-center opacity-40 group-hover:opacity-100 transition-opacity duration-700">
+                            <div className="flex gap-4 mb-4">
+                              {project.icons.map((icon, i) => (
+                                <div key={i} className="text-4xl">
+                                  {icon}
+                                </div>
+                              ))}
+                            </div>
+                            <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-slate-400">
+                              Preview coming soon
+                            </span>
+                          </div>
+                        )}
                       </div>
                     </div>
-                    <div>
-                      <h3 className="text-xl text-gray-800 dark:text-white font-bold">
-                        {project.title}
-                      </h3>
-                      <p className="text-gray-500 dark:text-gray-100 text-sm">
-                        {project.type}
-                      </p>
+
+                    <div className="absolute inset-0 bg-linear-to-t from-slate-900/60 to-transparent flex items-end p-8 opacity-0 group-hover:opacity-100 transition-opacity">
+                      {project.liveDemo !== "#" ? (
+                        <a
+                          href={project.liveDemo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-4 bg-white rounded-full text-slate-900 shadow-xl transform translate-y-4 group-hover:translate-y-0 transition-all duration-500"
+                        >
+                          <FiExternalLink size={24} />
+                        </a>
+                      ) : (
+                        <div className="px-6 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white text-[10px] font-bold uppercase tracking-widest transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                          Coming Soon
+                        </div>
+                      )}
                     </div>
                   </div>
 
-                  <p className="text-gray-700 dark:text-gray-100 mb-6">
-                    {project.description}
-                  </p>
+                  <div className="p-8 flex flex-col grow">
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">
+                        {project.type}
+                      </span>
+                      <div className="flex gap-2">
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-2 rounded-lg bg-slate-50 dark:bg-slate-800 text-slate-500 hover:text-blue-600 transition-colors"
+                        >
+                          <FiGithub size={18} />
+                        </a>
+                      </div>
+                    </div>
 
-                  <div className="mb-6">
-                    <h4 className="font-medium text-gray-800 dark:text-white mb-2">
-                      Technologies Used:
+                    <h4 className="text-2xl font-bold mb-4 group-hover:text-blue-600 transition-colors">
+                      {project.title}
                     </h4>
-                    <div className="flex flex-wrap gap-2">
+
+                    <p className="text-slate-600 dark:text-slate-400 font-light leading-relaxed mb-8 grow">
+                      {project.description}
+                    </p>
+
+                    <div className="flex flex-wrap gap-2 pt-6 border-t border-slate-100 dark:border-slate-800">
                       {project.technologies.map((tech) => (
                         <span
                           key={tech}
-                          className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-white rounded-full text-sm"
+                          className="px-3 py-1 bg-slate-50 dark:bg-slate-800/50 text-slate-500 dark:text-slate-400 rounded-lg text-xs font-mono"
                         >
                           {tech}
                         </span>
                       ))}
                     </div>
-                  </div>
-
-                  <div className="flex space-x-4 mt-auto">
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-center flex-1 px-4 py-2 bg-gray-800 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-700 dark:hover:bg-gray-600 transition-colors"
-                    >
-                      <FiGithub className="mr-2" />
-                      Code
-                    </a>
-                    {project.liveDemo !== '#' ? (
-                      <a
-                        href={project.liveDemo.startsWith('http') ? project.liveDemo : `https://${project.liveDemo}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center justify-center flex-1 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-                      >
-                        <FiExternalLink className="mr-2" />
-                        Live Demo
-                      </a>
-                    ) : (
-                      <button
-                        disabled
-                        className="flex items-center justify-center flex-1 px-4 py-2 bg-gray-400 dark:bg-gray-600 text-white rounded-lg cursor-not-allowed opacity-70"
-                      >
-                        <FiExternalLink className="mr-2" />
-                        Coming Soon
-                      </button>
-                    )}
                   </div>
                 </div>
               </motion.div>
@@ -203,16 +221,16 @@ const Projects = () => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.5 }}
             viewport={{ once: true }}
-            className="mt-12 text-center"
+            className="mt-20 text-center"
           >
             <a
               href="https://github.com/Ricsie11"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-6 py-3 border-2 border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400 rounded-lg font-medium hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors"
+              className="group inline-flex items-center gap-3 px-8 py-4 glass-panel rounded-2xl font-bold hover:bg-slate-50 dark:hover:bg-slate-900 transition-all"
             >
-              <FiGithub className="mr-2" />
-              View All Projects on GitHub
+              Explore more on GitHub
+              <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
             </a>
           </motion.div>
         </motion.div>

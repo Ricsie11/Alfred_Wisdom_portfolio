@@ -1,107 +1,111 @@
 import React from "react";
-import { FiGithub, FiMail, FiLinkedin, FiTwitter } from "react-icons/fi";
+import { Link } from "react-scroll";
+import {
+  FiGithub,
+  FiMail,
+  FiLinkedin,
+  FiTwitter,
+  FiArrowUp,
+} from "react-icons/fi";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative z-50 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border-t border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white py-12 mt-20 shadow-lg">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-8 md:mb-0">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center">
+    <footer className="relative py-20 overflow-hidden border-t border-slate-100 dark:border-slate-800/50 bg-white dark:bg-bg-dark">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="flex flex-col md:flex-row justify-between items-start gap-12 mb-16">
+          <div className="max-w-sm">
+            <Link
+              to="navbar"
+              smooth={true}
+              className="flex items-center space-x-3 cursor-pointer group mb-6"
+            >
+              <div className="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center shadow-glow">
                 <span className="text-white font-bold text-xl">AW</span>
               </div>
               <div>
-                <h2 className="text-xl font-bold text-gray-900 dark:text-white">
+                <h2 className="text-lg font-bold tracking-tight">
                   Alfred Wisdom
                 </h2>
-                <p className="text-gray-600 dark:text-gray-100">
-                  Full Stack Developer
+                <p className="text-[10px] uppercase tracking-widest text-slate-500 font-mono">
+                  Full Stack Engineer
                 </p>
               </div>
-            </div>
-            <p className="text-gray-600 dark:text-gray-100 max-w-md">
-              Building scalable, high-performance web applications with modern
-              technologies and clean code.
+            </Link>
+            <p className="text-slate-500 dark:text-slate-400 font-light leading-relaxed">
+              Crafting high-performance digital systems that balance
+              architectural integrity with visual excellence.
             </p>
           </div>
 
-          <div className="mb-8 md:mb-0">
-            <h3 className="text-gray-900 dark:text-white font-bold mb-4">
-              Quick Links
-            </h3>
-            <div className="flex flex-col space-y-2">
-              <a
-                href="#about"
-                className="text-gray-600 dark:text-gray-100 hover:text-blue-600 dark:hover:text-white transition-colors"
-              >
-                About Me
-              </a>
-              <a
-                href="#skills"
-                className="text-gray-600 dark:text-gray-100 hover:text-blue-600 dark:hover:text-white transition-colors"
-              >
-                Skills
-              </a>
-              <a
-                href="#projects"
-                className="text-gray-600 dark:text-gray-100 hover:text-blue-600 dark:hover:text-white transition-colors"
-              >
-                Projects
-              </a>
-              <a
-                href="#contact"
-                className="text-gray-600 dark:text-gray-100 hover:text-blue-600 dark:hover:text-white transition-colors"
-              >
-                Contact
-              </a>
+          <div className="grid grid-cols-2 gap-16">
+            <div>
+              <h4 className="text-xs font-mono uppercase tracking-widest text-slate-900 dark:text-white font-bold mb-6">
+                Navigation
+              </h4>
+              <nav className="flex flex-col space-y-4">
+                {["About", "Skills", "Projects", "Experience"].map((item) => (
+                  <Link
+                    key={item}
+                    to={item.toLowerCase()}
+                    smooth={true}
+                    className="text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-colors cursor-pointer"
+                  >
+                    {item}
+                  </Link>
+                ))}
+              </nav>
             </div>
-          </div>
-
-          <div>
-            <h3 className="text-gray-900 dark:text-white font-bold mb-4">
-              Connect
-            </h3>
-            <div className="flex space-x-4">
-              <a
-                href="https://github.com/Ricsie11"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center text-gray-700 dark:text-gray-200 hover:bg-blue-600 hover:text-white transition-colors"
-              >
-                <FiGithub />
-              </a>
-              <a
-                href="mailto:contact@alfredwisdom.dev"
-                className="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center text-gray-700 dark:text-gray-200 hover:bg-blue-600 hover:text-white transition-colors"
-              >
-                <FiMail />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center text-gray-700 dark:text-gray-200 hover:bg-blue-600 hover:text-white transition-colors"
-              >
-                <FiLinkedin />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center text-gray-700 dark:text-gray-200 hover:bg-blue-600 hover:text-white transition-colors"
-              >
-                <FiTwitter />
-              </a>
+            <div>
+              <h4 className="text-xs font-mono uppercase tracking-widest text-slate-900 dark:text-white font-bold mb-6">
+                Social
+              </h4>
+              <nav className="flex flex-col space-y-4">
+                {[
+                  {
+                    name: "GitHub",
+                    icon: <FiGithub />,
+                    href: "https://github.com/Ricsie11",
+                  },
+                  {
+                    name: "Email",
+                    icon: <FiMail />,
+                    href: "mailto:contact@alfredwisdom.dev",
+                  },
+                  { name: "LinkedIn", icon: <FiLinkedin />, href: "#" },
+                  { name: "Twitter", icon: <FiTwitter />, href: "#" },
+                ].map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    className="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-colors"
+                  >
+                    {social.icon} <span>{social.name}</span>
+                  </a>
+                ))}
+              </nav>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
-          <p>© {currentYear} Alfred Wisdom. All rights reserved.</p>
-          <p className="mt-2 text-sm">
-            Designed and built with ❤️ and a beautiful mind 🧠{" "}
+        <div className="pt-8 border-t border-slate-100 dark:border-slate-800/50 flex flex-col md:flex-row justify-between items-center gap-6">
+          <p className="text-xs text-slate-500 dark:text-slate-500 font-mono tracking-wider">
+            © {currentYear} ALFRED WISDOM. ALL RIGHTS RESERVED.
           </p>
+
+          <button
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="p-3 bg-slate-50 dark:bg-slate-900/50 rounded-xl text-slate-400 hover:text-blue-600 transition-all border border-slate-100 dark:border-slate-800 group"
+          >
+            <FiArrowUp className="group-hover:-translate-y-1 transition-transform" />
+          </button>
         </div>
       </div>
+
+      {/* Visual flourishes */}
+      <div className="absolute top-0 right-1/4 w-[300px] h-[300px] bg-blue-500/5 rounded-full blur-[100px] -z-10" />
     </footer>
   );
 };
