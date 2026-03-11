@@ -67,7 +67,7 @@ const FrontendResume = () => {
               <div>
                 <h4 className="font-bold">Trackr (Full Stack Application)</h4>
                 <p className="text-sm text-gray-600 italic">React, Tailwind, React-chart, PostgreSQL, Django</p>
-                <p className="text-sm text-gray-700">Frontend for Trackr — responsive expense dashboards, interactive charts, and intuitive budgeting UI. Live: <a href="https://trackr-roan.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">trackr-roan.vercel.app</a></p>
+                <p className="text-sm text-gray-700">Frontend for Trackr — responsive expense dashboards, interactive charts, and intuitive budgeting UI.</p>
               </div>
             </div>
           </section>
