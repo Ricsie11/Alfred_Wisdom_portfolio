@@ -137,3 +137,13 @@ body {
 .animate-shooting-star {
   animation: shooting-star 3s linear infinite;
 }
+
+
+@media print {
+  @page {
+    margin: 0;
+  }
+  body {
+    margin: 1cm; /* adjust margins as needed */
+  }
+}
