@@ -132,7 +132,7 @@ const Hero = () => {
                   </p>
                 </div>
                 <div>
-                  <h4 className="text-2xl font-bold">1+</h4>
+                  <h4 className="text-2xl font-bold">2+</h4>
                   <p className="text-sm text-slate-500 font-mono">Years Exp.</p>
                 </div>
                 <div className="hidden sm:block">
