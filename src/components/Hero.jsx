@@ -63,15 +63,6 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800 mb-6 group cursor-default">
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
-                </span>
-                <span className="text-xs font-medium text-blue-700 dark:text-blue-300 uppercase tracking-wider font-mono">
-                  Available for new opportunities
-                </span>
-              </div>
 
               <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6">
                 Creating{" "}
@@ -167,48 +158,6 @@ const Hero = () => {
                   <div className="absolute inset-0 bg-linear-to-t from-blue-900/40 to-transparent mix-blend-multiply transition-opacity group-hover:opacity-60" />
                 </div>
               </div>
-
-              {/* Floating Badges */}
-              <motion.div
-                animate={{ y: [0, -10, 0] }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-                className="absolute -top-4 -right-4 p-4 glass-panel rounded-2xl shadow-xl flex items-center gap-3 backdrop-blur-xl border-white/20"
-              >
-                <div className="p-2 bg-blue-100 dark:bg-blue-900/30 rounded-lg text-blue-600">
-                  <FiGithub size={20} />
-                </div>
-                <div>
-                  <p className="text-[10px] font-mono uppercase tracking-tighter text-slate-500">
-                    Latest Pulse
-                  </p>
-                  <p className="text-sm font-bold">Commit 2h ago</p>
-                </div>
-              </motion.div>
-
-              <motion.div
-                animate={{ y: [0, 10, 0] }}
-                transition={{
-                  duration: 5,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: 1,
-                }}
-                className="absolute -bottom-6 -left-8 p-4 glass-panel rounded-2xl shadow-xl flex items-center gap-3 backdrop-blur-xl border-white/20"
-              >
-                <div className="flex -space-x-2">
-                  {[1, 2, 3].map((i) => (
-                    <div
-                      key={i}
-                      className="w-8 h-8 rounded-full border-2 border-white dark:border-slate-800 bg-slate-200 dark:bg-slate-700"
-                    />
-                  ))}
-                </div>
-                <p className="text-xs font-semibold">+12 Collaborators</p>
-              </motion.div>
             </div>
           </motion.div>
         </div>
@@ -220,10 +169,7 @@ const Hero = () => {
         animate={{ y: [0, 8, 0] }}
         transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
       >
-        <span className="text-[10px] uppercase tracking-[0.3em] font-mono">
-          Explore
-        </span>
-        <div className="w-px h-12 bg-linear-to-b from-blue-500 to-transparent" />
+        
       </motion.div>
     </section>
   );
