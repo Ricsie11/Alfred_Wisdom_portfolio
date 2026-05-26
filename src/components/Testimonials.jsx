@@ -3,32 +3,32 @@ import { motion } from 'framer-motion';
 import { FiStar } from 'react-icons/fi';
 
 const Testimonials = () => {
-  const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      role: 'Project Manager, Tech Solutions Inc.',
-      content: 'Alfred delivered exceptional work on our enterprise application. His Django backend was robust and well-documented, and he consistently met tight deadlines with quality code.',
-      rating: 5,
-      avatar: 'SJ'
-    },
-    {
-      name: 'Michael Chen',
-      role: 'CTO, Startup Ventures',
-      content: 'Working with Alfred was a great experience. He built our full-stack platform from scratch with React and Django. His attention to detail and problem-solving skills are outstanding.',
-      rating: 5,
-      avatar: 'MC'
-    },
-    {
-      name: 'Emma Rodriguez',
-      role: 'Product Lead, Web Innovations',
-      content: 'Alfred transformed our frontend with React and Tailwind CSS. The performance improvements and responsive design he implemented significantly enhanced user experience.',
-      rating: 4,
-      avatar: 'ER'
-    },
-  ];
+  // const testimonials = [
+  //   {
+  //     name: 'Sarah Johnson',
+  //     role: 'Project Manager, Tech Solutions Inc.',
+  //     content: 'Alfred delivered exceptional work on our enterprise application. His Django backend was robust and well-documented, and he consistently met tight deadlines with quality code.',
+  //     rating: 5,
+  //     avatar: 'SJ'
+  //   },
+  //   {
+  //     name: 'Michael Chen',
+  //     role: 'CTO, Startup Ventures',
+  //     content: 'Working with Alfred was a great experience. He built our full-stack platform from scratch with React and Django. His attention to detail and problem-solving skills are outstanding.',
+  //     rating: 5,
+  //     avatar: 'MC'
+  //   },
+  //   {
+  //     name: 'Emma Rodriguez',
+  //     role: 'Product Lead, Web Innovations',
+  //     content: 'Alfred transformed our frontend with React and Tailwind CSS. The performance improvements and responsive design he implemented significantly enhanced user experience.',
+  //     rating: 4,
+  //     avatar: 'ER'
+  //   },
+  // ];
   
   return (
-    <section id="testimonials" className="py-20 bg-gray-100 dark:bg-gray-800/50">
+    <section id="testimonials" className="py-20 ">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -36,14 +36,14 @@ const Testimonials = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+          {/* <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
             Client <span className="text-blue-600 dark:text-blue-400">Testimonials</span>
           </h2>
           <p className="text-gray-600 dark:text-gray-100 text-center mb-12 max-w-2xl mx-auto">
             What colleagues and clients say about working with me
-          </p>
+          </p> */}
           
-          <div className="grid md:grid-cols-3 gap-8">
+          {/* <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={testimonial.name}
@@ -75,7 +75,7 @@ const Testimonials = () => {
                 <p className="text-gray-700 dark:text-gray-100 italic">"{testimonial.content}"</p>
               </motion.div>
             ))}
-          </div>
+          </div> */}
           
           <motion.div
             initial={{ opacity: 0 }}
@@ -91,7 +91,7 @@ const Testimonials = () => {
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <a
-                  href="mailto:contact@alfredwisdom.dev"
+                  href="mailto:wisdomalfred964@gmail.com"
                   className="px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"
                 >
                   Get In Touch

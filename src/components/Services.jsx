@@ -109,13 +109,13 @@ const Services = () => {
           viewport={{ once: true }}
         >
           <div className="text-center mb-20">
-            <h2 className="text-sm font-mono uppercase tracking-[0.4em] text-blue-600 dark:text-blue-400 mb-4">
+            <h2 className="text-3xl font-bold uppercase">
               Expertise
             </h2>
-            <h3 className="text-4xl md:text-5xl font-bold tracking-tight">
+            {/* <h3 className="text-4xl md:text-5xl font-bold tracking-tight">
               Professional{" "}
               <span className="italic text-slate-400">Offerings</span>.
-            </h3>
+            </h3> */}
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

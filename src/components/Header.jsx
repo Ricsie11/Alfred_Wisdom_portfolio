@@ -89,7 +89,7 @@ const Header = ({ darkMode, toggleDarkMode }) => {
                 <FiGithub size={18} />
               </a>
               <a
-                href="mailto:contact@alfredwisdom.dev"
+                href="mailto:wisdomalfred964@gmail.com"
                 className="p-2 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-blue-600 dark:hover:text-blue-400 transition-all"
                 title="Email"
               >
@@ -147,7 +147,7 @@ const Header = ({ darkMode, toggleDarkMode }) => {
                     <FiGithub size={24} />
                   </a>
                   <a
-                    href="mailto:contact@alfredwisdom.dev"
+                    href="mailto:wisdomalfred964@gmail.com"
                     className="text-slate-500 dark:text-slate-400 p-2"
                   >
                     <FiMail size={24} />

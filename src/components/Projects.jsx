@@ -28,17 +28,17 @@ const Projects = () => {
       color: "blue",
     },
     {
-      title: "Trackr",
-      type: "Full Stack Ecosystem",
+      title: "Styles by Ryan",
+      type: "Frontend Engine",
       description:
-        "Enterprise-grade financial analytics suite with real-time budgeting algorithms and multi-layered security.",
-      technologies: ["Django", "React", "PostgreSQL"],
+        "A modern hair styling website designed to showcase services, featuring a responsive design and seamless experience.",
+      technologies: ["React", "Tailwind", "Framer Motion"],
       github: "https://github.com/Ricsie11",
-      liveDemo: "https://trackr-roan.vercel.app",
+      liveDemo: "https://styles-by-ryan.vercel.app",
       icons: [
-        <SiDjango key="django" className="text-green-600" />,
-        <FaReact key="react" className="text-blue-400" />,
-        <SiPostgresql key="postgres" className="text-blue-600" />,
+        <FaReact key="react" className="text-blue-500" />,
+        <SiTailwindcss key="tailwind" className="text-cyan-400" />,
+        <SiFramer key="framer" className="text-white" />,
       ],
       color: "emerald",
     },
@@ -57,19 +57,20 @@ const Projects = () => {
       color: "purple",
     },
     {
-      title: "SyncOS",
-      type: "Real-time Protocol",
-      description:
-        "Collaborative orchestration tool powered by WebSockets for instantaneous state synchronization across distributed teams.",
-      technologies: ["Django Channels", "WebSockets", "React"],
-      github: "https://github.com/Ricsie11",
-      liveDemo: "#",
-      icons: [
-        <FaPython key="python" className="text-yellow-500" />,
-        <FaReact key="react" className="text-blue-500" />,
-      ],
-      color: "amber",
-    },
+  title: "Fund Revolution",
+  type: "Loan Website",
+  description:
+    "A financial services website for a Nigerian lending company — built to communicate trust, showcase loan products, and drive applications from SMEs and salary earners.",
+  technologies: ["React", "Tailwind CSS", "Framer Motion"],
+  github: "https://github.com/Ricsie11",
+  liveDemo: "#",
+  icons: [
+    <FaReact key="react" className="text-blue-500" />,
+    <SiTailwindcss key="tailwind" className="text-cyan-400" />,
+    <SiFramer key="framer" className="text-white" />,
+  ],
+  color: "emerald",
+},
   ];
 
   return (
@@ -83,16 +84,12 @@ const Projects = () => {
         >
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <div>
-              <h2 className="text-sm font-mono uppercase tracking-[0.4em] text-blue-600 dark:text-blue-400 mb-4">
-                Portfolio
-              </h2>
-              <h3 className="text-4xl md:text-5xl font-bold tracking-tight">
-                Selected <span className="italic text-slate-400">Works</span>.
+              <h3 className="text-4xl md:text-5xl Uppercase font-bold tracking-tight">
+                Projects
               </h3>
             </div>
             <p className="text-slate-500 dark:text-slate-400 max-w-md font-light leading-relaxed">
-              A curated collection of digital systems designed to balance
-              architectical integrity with visual excellence.
+              A curated collection of some of my works, showcasing my skills and experience.
             </p>
           </div>
 

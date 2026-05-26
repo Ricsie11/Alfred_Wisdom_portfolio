@@ -8,6 +8,8 @@ import {
   FaGitAlt,
   FaTerminal,
   FaServer,
+  FaLayerGroup,
+  FaDatabase,
 } from "react-icons/fa";
 import {
   SiDjango,
@@ -15,7 +17,10 @@ import {
   SiMysql,
   SiTailwindcss,
   SiFramer,
+  SiExpo,
+  SiTypescript,
 } from "react-icons/si";
+import { TbBrandReactNative } from "react-icons/tb";
 
 const Skills = () => {
   const categories = [
@@ -34,6 +39,23 @@ const Skills = () => {
         { name: "Django", icon: <SiDjango />, color: "#092E20" },
         { name: "Python", icon: <FaPython />, color: "#3776AB" },
         { name: "PostgreSQL", icon: <SiPostgresql />, color: "#4169E1" },
+      ],
+    },
+
+    {
+      title: "Mobile Development",
+      skills: [
+        {
+          name: "React Native",
+          icon: <TbBrandReactNative />,
+          color: "#61DAFB",
+        },
+        { name: "Expo", icon: <SiExpo />, color: "#000020" },
+        { name: "Expo Router", icon: <SiExpo />, color: "#4630EB" },
+        { name: "TypeScript", icon: <SiTypescript />, color: "#3178C6" },
+        { name: "Zustand", icon: <FaLayerGroup />, color: "#443E38" },
+        { name: "AsyncStorage", icon: <FaDatabase />, color: "#47A248" },
+        { name: "EAS Build", icon: <SiExpo />, color: "#000020" },
       ],
     },
     {
@@ -56,11 +78,8 @@ const Skills = () => {
           viewport={{ once: true }}
         >
           <div className="text-center mb-20">
-            <h2 className="text-sm font-mono uppercase tracking-[0.4em] text-blue-600 dark:text-blue-400 mb-4">
-              Stack
-            </h2>
             <h3 className="text-4xl md:text-5xl font-bold tracking-tight">
-              Technical <span className="italic text-slate-400">Weaponry</span>.
+              Stacks
             </h3>
           </div>
 
@@ -98,7 +117,7 @@ const Skills = () => {
           {/* Tag Cloud for more skills */}
           <div className="mt-20 pt-16 border-t border-slate-100 dark:border-slate-800">
             <p className="text-center text-sm font-mono text-slate-500 mb-8 uppercase tracking-widest">
-              Other Technologies & Paradigms
+              Other Technologies
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               {[
@@ -107,12 +126,10 @@ const Skills = () => {
                 "PostgreSQL",
                 "MySQL",
                 "Redis",
-                "Docker",
                 "AWS",
                 "Vercel",
-                "Architecture Design",
-                "Performance Tuning",
-                "Security Audit",
+                "Render",
+                "System Design",
                 "UX Research",
               ].map((tool) => (
                 <span

@@ -10,37 +10,37 @@ const Timeline = () => {
       company: "Freelance / Contract",
       icon: <FiCode />,
       description:
-        "Engineering scalable full-stack ecosystem architectures using React, Django, and PostgreSQL. Focused on system optimization and complex API orchestration.",
+        "Building scalable full-stack applications using React, Django/Nestjs, and PostgreSQL. Focused on system optimization.",
       type: "Work",
       color: "blue",
     },
     {
       year: "2025",
       title: "Backend Developer",
-      company: "Tech Solutions Inc.",
+      company: "ALX Africa",
       icon: <FiBriefcase />,
       description:
-        "Architecting high-concurrency Django REST APIs and optimizing database query engines for enterprise-grade applications.",
-      type: "Work",
+        "Developing server-side applications with Django/Python and Nestjs, covering REST API design, database modeling, and authentication.",
+      type: "",
       color: "emerald",
     },
     {
       year: "2025",
       title: "Frontend Developer",
-      company: "Web Innovations LLC",
+      company: "ALX Africa",
       icon: <FiCode />,
       description:
-        "Crafting high-fidelity user experiences with React and Tailwind CSS, focusing on micro-interactions and performance tuning.",
-      type: "Work",
-      color: "purple",
+        "Building high-fidelity user experiences with React, framer-motion and Tailwind CSS, focusing on performance, scalability and user experience.",
+      type: "",
+      color: "emerald",
     },
     {
-      year: "2023 - 2024",
+      year: "2021 - 2023",
       title: "Computer Science Diploma",
       company: "Federal Polythenic Nasarawa",
       icon: <FiAward />,
       description:
-        "Specialized in Software Engineering and Database Theory. Graduated with honors after completing a thesis on scalable web systems.",
+        "Studied Computer architecture and Database Theory. Gained hands-on experience in software development, data structures, algorithms, and system design.",
       type: "Education",
       color: "amber",
     },
@@ -50,7 +50,7 @@ const Timeline = () => {
       company: "Miva Open University",
       icon: <FiAward />,
       description:
-        "Advanced studies in Software Engineering, focusing on distributed systems and cloud architecture.",
+        "Advanced my studies in Software Engineering, focusing on Software development and system design.",
       type: "Education",
       color: "blue",
     },
@@ -67,16 +67,12 @@ const Timeline = () => {
         >
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-6">
             <div>
-              <h2 className="text-sm font-mono uppercase tracking-[0.4em] text-blue-600 dark:text-blue-400 mb-4">
-                Journey
-              </h2>
               <h3 className="text-4xl md:text-5xl font-bold tracking-tight">
-                Career <span className="italic text-slate-400">Chapters</span>.
+                Learning Path
               </h3>
             </div>
             <p className="text-slate-500 dark:text-slate-400 max-w-md font-light leading-relaxed">
-              A chronological map of professional evolution and academic
-              foundations.
+              From curiosity to code — the path that brought me here.
             </p>
           </div>
 

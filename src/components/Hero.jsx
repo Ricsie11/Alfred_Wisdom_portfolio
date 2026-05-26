@@ -44,6 +44,12 @@ const Hero = () => {
     }
   };
 
+  const totalDays = Math.floor((new Date() - new Date("2025-09-01")) / (1000 * 60 * 60 * 24))
+  const years = Math.floor(totalDays / 365.25)
+  const month = Math.floor((totalDays % 365.25) / 30.44)
+
+  const experience = years > 0 ? `${years}yr ${month} month` : `${month} months`
+
   return (
     <section
       id="hero"
@@ -123,15 +129,15 @@ const Hero = () => {
                   </p>
                 </div>
                 <div>
-                  <h4 className="text-2xl font-bold">2+</h4>
-                  <p className="text-sm text-slate-500 font-mono">Years Exp.</p>
+                  <h4 className="text-2xl font-bold">{experience}</h4>
+                  <p className="text-sm text-slate-500 font-mono">Experience</p>
                 </div>
-                <div className="hidden sm:block">
+                {/* <div className="hidden sm:block">
                   <h4 className="text-2xl font-bold">5+</h4>
                   <p className="text-sm text-slate-500 font-mono">
                     Happy Clients
                   </p>
-                </div>
+                </div> */}
               </div>
             </motion.div>
           </div>
