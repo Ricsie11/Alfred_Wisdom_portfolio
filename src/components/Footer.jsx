@@ -71,7 +71,7 @@ const Footer = () => {
                   {
                     name: "Email",
                     icon: <FiMail />,
-                    href: "mailto:contact@alfredwisdom.dev",
+                    href: "mailto:wisdomalfred964@gmail.com",
                   },
                   { name: "LinkedIn", icon: <FiLinkedin />, href: "#" },
                   { name: "Twitter", icon: <FiTwitter />, href: "#" },
