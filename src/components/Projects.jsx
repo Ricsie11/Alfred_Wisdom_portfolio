@@ -12,13 +12,13 @@ import {
 const Projects = () => {
   const projects = [
     {
-      title: "Atlas Travels",
+      title: "KaydenTech",
       type: "Frontend Engine",
       description:
-        "A high-performance travel architecture featuring interactive itinerary engines and dynamic destination exploration.",
+        "A high-performance digital agency specializing in custom software development, web applications, and scalable e-commerce ecosystems.",
       technologies: ["React", "Tailwind", "Framer Motion"],
-      github: "https://github.com/Ricsie11",
-      liveDemo: "https://atlas-travels.vercel.app/",
+      github: "https://github.com/Ricsie11/kaydentech",
+      liveDemo: "https://kaydentech.vercel.app/",
       featured: true,
       icons: [
         <FaReact key="react" className="text-blue-500" />,
@@ -57,20 +57,20 @@ const Projects = () => {
       color: "purple",
     },
     {
-  title: "Fund Revolution",
-  type: "Loan Website",
-  description:
-    "A financial services website for a Nigerian lending company — built to communicate trust, showcase loan products, and drive applications from SMEs and salary earners.",
-  technologies: ["React", "Tailwind CSS", "Framer Motion"],
-  github: "https://github.com/Ricsie11",
-  liveDemo: "#",
-  icons: [
-    <FaReact key="react" className="text-blue-500" />,
-    <SiTailwindcss key="tailwind" className="text-cyan-400" />,
-    <SiFramer key="framer" className="text-white" />,
-  ],
-  color: "emerald",
-},
+      title: "Fund Revolution",
+      type: "Loan Website",
+      description:
+        "A financial services website for a Nigerian lending company — built to communicate trust, showcase loan products, and drive applications from SMEs and salary earners.",
+      technologies: ["React", "Tailwind CSS", "Framer Motion"],
+      github: "https://github.com/Ricsie11",
+      liveDemo: "#",
+      icons: [
+        <FaReact key="react" className="text-blue-500" />,
+        <SiTailwindcss key="tailwind" className="text-cyan-400" />,
+        <SiFramer key="framer" className="text-white" />,
+      ],
+      color: "emerald",
+    },
   ];
 
   return (
@@ -89,7 +89,8 @@ const Projects = () => {
               </h3>
             </div>
             <p className="text-slate-500 dark:text-slate-400 max-w-md font-light leading-relaxed">
-              A curated collection of some of my works, showcasing my skills and experience.
+              A curated collection of some of my works, showcasing my skills and
+              experience.
             </p>
           </div>
 
